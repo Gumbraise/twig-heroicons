@@ -5,7 +5,7 @@ namespace MarcW\Heroicons\Tests;
 use PHPUnit\Framework\TestCase;
 use MarcW\Heroicons\Heroicons;
 
-class HeroiconsTests extends TestCase
+class HeroiconsTest extends TestCase
 {
     public function testGet()
     {
