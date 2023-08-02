@@ -1,28 +1,33 @@
 {
-    "name": "gumbraise/twig-heroicons",
-    "description": "Unofficial Twig integration for Heroicons",
-    "type": "library",
-    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Weistroff",
+            "email": "marc@weistroff.net",
+            "homepage": "https://marc.weistroff.net/",
+            "role": "Developer"
+        },
+        {
+            "name": "Gumbraise",
+            "email": "dev@kellis.fr",
+            "homepage": "https://kellis.fr/",
+            "role": "Forker"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "MarcW\\Heroicons\\": "src/"
-        } 
+        }
     },
     "autoload-dev": {
         "psr-4": {
             "MarcW\\Heroicons\\Tests\\": "tests/"
-        } 
-    },
-    "authors": [
-        {
-            "name": "Marc Weistroff",
-            "email": "marc@weistroff.net"
-        },
-        {
-            "name": "Gumbraise",
-            "email": "dev@kellis.fr"
         }
-    ],
+    },
+    "description": "Unofficial Twig integration for Heroicons",
+    "homepage": "https://github.com/Gumbraise/twig-heroicons",
+    "license": "MIT",
+    "name": "gumbraise/twig-heroicons",
+    "readme": "README.md",
     "require": {
         "twig/twig": "^3.3"
     },
@@ -30,10 +35,6 @@
         "phpunit/phpunit": "^9.6.10",
         "symfony/framework-bundle": "^6.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/marcw/twig-heroicons"
-        }
-    ]
+    "type": "library",
+    "version": "2.0.18"
 }
