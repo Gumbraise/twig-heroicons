@@ -1,6 +1,6 @@
 # Twig Heroicons
 
-[![tests](https://github.com/marcw/twig-heroicons/actions/workflows/php.yml/badge.svg)](https://github.com/marcw/twig-heroicons/actions/workflows/php.yml)
+[![tests](https://github.com/Gumbraise/twig-heroicons/actions/workflows/php.yml/badge.svg)](https://github.com/Gumbraise/twig-heroicons/actions/workflows/php.yml)
 
 This package provides an Heroicons integration for Twig.
 
