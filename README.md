@@ -9,7 +9,7 @@ This package provides an Heroicons integration for Twig.
 Use composer:
 
 ```bash
-composer require marcw/twig-heroicons
+composer require gumbraise/twig-heroicons
 ```
 
 ### Symfony
@@ -43,6 +43,9 @@ This extension provides a `heroicon` function that outputs the icon SVG.
 
 {# use the 'outline' style #}
 {{ heroicon('academic-cap', '', 'outline') }}
+
+{# use the 'mini' style #}
+{{ heroicon('academic-cap', '', 'mini') }}
 
 {# Add a custom class to the SVG #}
 {{ heroicon('academic-cap', 'text-green-200', 'outline') }}

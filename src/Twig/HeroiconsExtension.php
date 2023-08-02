@@ -8,14 +8,14 @@ use Twig\Extension\AbstractExtension;
 
 class HeroiconsExtension extends AbstractExtension
 {
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('heroicon', [$this, 'getHeroicon'], ['is_safe' => ['html']]),
         ];
     }
 
-    public function getHeroicon(string $icon, string $class = '', string $style = Heroicons::STYLE_SOLID)
+    public function getHeroicon(string $icon, string $class = '', string $style = Heroicons::STYLE_SOLID): array|false|string
     {
         $svg = Heroicons::get($icon, $style);
         if (!$class) {
