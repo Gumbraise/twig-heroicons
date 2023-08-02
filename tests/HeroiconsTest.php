@@ -11,7 +11,7 @@ class HeroiconsTest extends TestCase
     {
         $svg = Heroicons::get('academic-cap', 'solid');
 
-        $this->assertSame(0, strpos($svg, '<svg'));
+        $this->assertStringStartsWith('<svg', $svg);
     }
 
     public function testUnknownStyleThrowsException()
