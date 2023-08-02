@@ -2,6 +2,7 @@
 
 namespace MarcW\Heroicons\Twig;
 
+use MarcW\Heroicons\HeroiconOptions;
 use MarcW\Heroicons\Heroicons;
 use Twig\TwigFunction;
 use Twig\Extension\AbstractExtension;
@@ -15,13 +16,8 @@ class HeroiconsExtension extends AbstractExtension
         ];
     }
 
-    public function getHeroicon(string $icon, string $class = '', string $style = Heroicons::STYLE_SOLID): array|false|string
+    public function getHeroicon(string $icon, string $style = Heroicons::STYLE_SOLID, array $options = []): array|false|string
     {
-        $svg = Heroicons::get($icon, $style);
-        if (!$class) {
-            return $svg;
-        }
-
-        return str_replace('<svg', sprintf('<svg class="%s"', $class), $svg);
+        return HeroiconOptions::applyOptions(Heroicons::get($icon, $style), $options);
     }
 }

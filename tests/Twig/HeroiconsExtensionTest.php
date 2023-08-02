@@ -2,6 +2,7 @@
 
 namespace MarcW\Heroicons\Tests\Twig;
 
+use MarcW\Heroicons\Heroicons;
 use MarcW\Heroicons\Twig\HeroiconsExtension;
 use PHPUnit\Framework\TestCase;
 use Twig\Environment;
@@ -20,7 +21,7 @@ class HeroiconsExtensionTest extends TestCase
     public function testGetHeroiconWithCustomClass()
     {
         $extension = new HeroiconsExtension();
-        $svg = $extension->getHeroicon('academic-cap', 'foo bar');
+        $svg = $extension->getHeroicon('academic-cap', Heroicons::STYLE_SOLID, ['class' => 'foo bar']);
 
         $this->assertStringStartsWith('<svg class="foo bar"', $svg);
     }
