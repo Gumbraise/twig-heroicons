@@ -1,5 +1,5 @@
 {
-    "name": "marcw/twig-heroicons",
+    "name": "gumbraise/twig-heroicons",
     "description": "Unofficial Twig integration for Heroicons",
     "type": "library",
     "license": "MIT",
@@ -17,13 +17,17 @@
         {
             "name": "Marc Weistroff",
             "email": "marc@weistroff.net"
+        },
+        {
+            "name": "Gumbraise",
+            "email": "dev@kellis.fr"
         }
     ],
     "require": {
         "twig/twig": "^3.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
-        "symfony/framework-bundle": "^5.0"
+        "phpunit/phpunit": "^9.6.10",
+        "symfony/framework-bundle": "^6.0"
     }
 }
