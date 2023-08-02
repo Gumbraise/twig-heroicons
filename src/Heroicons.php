@@ -10,7 +10,7 @@ final class Heroicons
 
     public static function get($icon, $style = self::STYLE_SOLID): false|string
     {
-        if (self::STYLE_SOLID !== $style && self::STYLE_OUTLINE !== $style) {
+        if (self::STYLE_SOLID !== $style && self::STYLE_OUTLINE !== $style && self::STYLE_MINI !== $style) {
             throw new \LogicException(sprintf('Heroicons style "%s" is not available.', $style));
         }
 
