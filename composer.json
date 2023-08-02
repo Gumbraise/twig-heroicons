@@ -29,5 +29,11 @@
     "require-dev": {
         "phpunit/phpunit": "^9.6.10",
         "symfony/framework-bundle": "^6.0"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/marcw/twig-heroicons"
+        }
+    ]
 }
