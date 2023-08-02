@@ -34,22 +34,53 @@ $twig->addExtension(new HeroiconsExtension());
 
 This extension provides a `heroicon` function that outputs the icon SVG.
 
-```jinja2
+```twig
 {# function signature #}
-{{ heroicon(icon, class, style) }}
+{{ heroicon(icon, style, options) }}
 
 {# the default style is 'solid' #}
 {{ heroicon('academic-cap') }}
 
 {# use the 'outline' style #}
-{{ heroicon('academic-cap', '', 'outline') }}
+{{ heroicon('academic-cap', 'outline') }}
 
 {# use the 'mini' style #}
-{{ heroicon('academic-cap', '', 'mini') }}
+{{ heroicon('academic-cap', 'mini') }}
 
 {# Add a custom class to the SVG #}
-{{ heroicon('academic-cap', 'text-green-200', 'outline') }}
+{{ heroicon('academic-cap', 'outline', {
+    'class' => "text-green-200",
+}) }}
 ```
+
+### Supported Options
+
+You can add several options at the same time.
+
+- Class
+    ```twig
+    {{ heroicon(icon, style, {
+  'class': '...'  
+  }) }}
+    ```
+- Stroke
+  ```twig
+  {{ heroicon(icon, style, {
+  'stroke': '#......'  
+  }) }}
+  ```
+- Stroke Width
+  ```twig
+  {{ heroicon(icon, style, {
+  'stroke-width': '...'  
+  }) }}
+  ```
+- Fill
+  ```twig
+  {{ heroicon(icon, style, {
+  'fill': '#......'  
+  }) }}
+  ```
 
 ## License
 
