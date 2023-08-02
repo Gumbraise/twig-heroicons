@@ -20,7 +20,9 @@ final class Heroicons
             throw new \LogicException(sprintf('Heroicon "%s" in style "%s" cannot be found or is not readable.', $icon, $style));
         }
 
-        return file_get_contents($path);
+        $svgContent = file_get_contents($path);
+
+        return preg_replace('/\s(fill|stroke)="[^"]*"/', '', $svgContent);
     }
 
     private static function getIconPath(string $style): string
