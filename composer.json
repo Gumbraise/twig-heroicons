@@ -35,6 +35,5 @@
         "phpunit/phpunit": "^9.6.10",
         "symfony/framework-bundle": "^5.0"
     },
-    "type": "library",
-    "version": "2.0.18"
+    "type": "library"
 }
