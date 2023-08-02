@@ -16,7 +16,7 @@ final class Heroicons
 
         $path = sprintf('%s/%s.svg', realpath(__DIR__ . self::getIconPath($style)), $icon);
         if (!is_readable($path)) {
-            throw new \LogicException(sprintf('Heroicon "%s" in style "%s" cannot be found or is not readable. (%s)', $icon, $style, $path));
+            throw new \LogicException(sprintf('Heroicon "%s" in style "%s" cannot be found or is not readable.', $icon, $style));
         }
 
         return file_get_contents($path);
@@ -27,11 +27,11 @@ final class Heroicons
         switch ($style) {
             default:
             case self::STYLE_SOLID:
-                return '/24/solid';
+                return '/../resources/heroicons/24/solid';
             case self::STYLE_OUTLINE:
-                return '/24/outline';
+                return '/../resources/heroicons/24/outline';
             case self::STYLE_MINI:
-                return '/20/solid';
+                return '/../resources/heroicons/20/solid';
         }
     }
 }
