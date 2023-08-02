@@ -16,7 +16,7 @@ final class Heroicons
 
         $path = sprintf('%s/%s.svg', realpath(__DIR__ . self::getIconPath($style)), $icon);
         if (!is_readable($path)) {
-            throw new \LogicException(sprintf('Heroicon "%s" in style "%s" cannot be found or is not readable.', $icon, $style));
+            throw new \LogicException(sprintf('Heroicon "%s" in style "%s" cannot be found or is not readable. (%s)', $icon, $style, $path));
         }
 
         return file_get_contents($path);
