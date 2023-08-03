@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/Gumbraise/twig-heroicons/actions/workflows/php.yml/badge.svg)](https://github.com/Gumbraise/twig-heroicons/actions/workflows/php.yml)
 
-This package provides an Heroicons integration for Twig.
+This package provides a Heroicons integration for Twig.
 
 ## Install
 
@@ -49,7 +49,7 @@ This extension provides a `heroicon` function that outputs the icon SVG.
 
 {# Add a custom class to the SVG #}
 {{ heroicon('academic-cap', 'outline', {
-    'class' => "text-green-200",
+    'class': "text-green-200",
 }) }}
 ```
 
@@ -58,27 +58,27 @@ This extension provides a `heroicon` function that outputs the icon SVG.
 You can add several options at the same time.
 
 - Class
-    ```twig
-    {{ heroicon(icon, style, {
-  'class': '...'  
+  ```twig
+  {{ heroicon(icon, style, {
+    'class': '...'  
   }) }}
     ```
 - Stroke
   ```twig
   {{ heroicon(icon, style, {
-  'stroke': '#......'  
+    'stroke': '#......'  
   }) }}
   ```
 - Stroke Width
   ```twig
   {{ heroicon(icon, style, {
-  'stroke-width': '...'  
+    'stroke-width': '...'  
   }) }}
   ```
 - Fill
   ```twig
   {{ heroicon(icon, style, {
-  'fill': '#......'  
+    'fill': '#......'  
   }) }}
   ```
 
