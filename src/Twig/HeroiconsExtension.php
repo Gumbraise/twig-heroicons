@@ -18,6 +18,6 @@ class HeroiconsExtension extends AbstractExtension
 
     public function getHeroicon(string $icon, string $style = Heroicons::STYLE_SOLID, array $options = []): array|false|string
     {
-        return HeroiconOptions::applyOptions(Heroicons::get($icon, $style), $options);
+        return Heroicons::get($icon, $style, $options);
     }
 }

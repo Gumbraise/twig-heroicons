@@ -8,7 +8,7 @@ final class Heroicons
     const STYLE_OUTLINE = 'outline';
     const STYLE_MINI = 'mini';
 
-    public static function get($icon, $style = self::STYLE_SOLID): array|string|null
+    public static function get($icon, $style = self::STYLE_SOLID, array $options = []): array|string|null
     {
         if (self::STYLE_SOLID !== $style && self::STYLE_OUTLINE !== $style && self::STYLE_MINI !== $style) {
             throw new \LogicException(sprintf('Heroicons style "%s" is not available.', $style));
@@ -20,7 +20,7 @@ final class Heroicons
             throw new \LogicException(sprintf('Heroicon "%s" in style "%s" cannot be found or is not readable.', $icon, $style));
         }
 
-        return file_get_contents($path);
+        return HeroiconOptions::applyOptions(file_get_contents($path), $options);
     }
 
     private static function getIconPath(string $style): string
